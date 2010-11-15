@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.VisualStudio.OLE.Interop</name>
+	</assembly>
+	<members>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IAdviseSink">
+			<summary>Enables containers and other objects to receive notice of changes. Standard OLE interface. For more information, see IAdviseSink.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IAdviseSink2">
+			<summary>Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IAdviseSink"></see>. Supports an additional notification. Standard OLE interface. For more information, see IAdviseSink2.</summary>
+		</member>
+		<member name="M:Microsoft.VisualStudio.OLE.Interop.IAdviseSink2.OnDataChange(Microsoft.VisualStudio.OLE.Interop.FORMATETC[],Microsoft.VisualStudio.OLE.Interop.STGMEDIUM[])">
+			<param name="pStgmed"> </param>
+			<param name="pFormatetc"> </param>
+		</member>
+		<member name="M:Microsoft.VisualStudio.OLE.Interop.IAdviseSink2.OnLinkSrcChange(Microsoft.VisualStudio.OLE.Interop.IMoniker)">
+			<param name="pmk"> </param>
+		</member>
+		<member name="M:Microsoft.VisualStudio.OLE.Interop.IAdviseSink2.OnRename(Microsoft.VisualStudio.OLE.Interop.IMoniker)">
+			<param name="pmk"> </param>
+		</member>
+		<member name="M:Microsoft.VisualStudio.OLE.Interop.IAdviseSink2.OnViewChange(System.UInt32,System.Int32)">
+			<param name="dwAspect"> </param>
+			<param name="lindex"> </param>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IAdviseSinkEx">
+			<summary>Extends <see cref="T:Microsoft.VisualStudio.OLE.Interop.IAdviseSink"></see> to provide notification of changes in an object's view status. Standard OLE interface. For more information, see IAdviseSinkEx.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IAsyncManager">
+			<summary>Monitors an asynchronous distributed COM (DCOM) call. Used as an argument in the <see cref="M:Microsoft.VisualStudio.OLE.Interop.IRpcChannelBuffer3.RegisterAsync(Microsoft.VisualStudio.OLE.Interop.RPCOLEMESSAGE[],Microsoft.VisualStudio.OLE.Interop.IAsyncManager)"></see> method of the <see cref="T:Microsoft.VisualStudio.OLE.Interop.IRpcChannelBuffer3"></see> interface.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IAsyncRpcChannelBuffer">
+			<summary>Manages a buffer for a remote procedure call. Used for asynchronous distributed COM (DCOM) calls. For more information about remote invocation, see Standard Marshaling and Write Your Own Transport for COM Calls Leveraging the Power of Late Binding.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IBindCtx">
+			<summary>Accumulates information about objects bound in a particular operation but that need to be released at the end of the operation. Commonly used in operations involving moniker binding. Standard COM interface. For more information, see IBindCtx.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IBindHost">
+			<summary>Implemented by a container to enable hosted objects to do asynchronous data transfers through the container. For more information, see IBindHost and About Cooperative and Asynchronous Data Retrieval.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IBinding">
+			<summary>Enables a client program using an asynchronous moniker to control the progress of a bind operation. Used as an argument in the <see cref="M:Microsoft.VisualStudio.OLE.Interop.IBindStatusCallback.OnStartBinding(System.UInt32,Microsoft.VisualStudio.OLE.Interop.IBinding)"></see> method of the <see cref="T:Microsoft.VisualStudio.OLE.Interop.IBindStatusCallback"></see> interface. For more information, see IBinding and About Cooperative and Asynchronous Data Retrieval.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IBindStatusCallback">
+			<summary>Provides information about and defines callback methods for monitoring an asynchronous binding operation. For more information, see About Cooperative and Asynchronous Data Retrieval and IBindStatusCallback.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IBlockingLock">
+			<summary>Provides a semaphore to enable temporary exclusive access to a resource. For more information, see IBlockingLock.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ICallFactory">
+			<summary>Creates an object for processing method calls on asynchronous interfaces. For more information, see ICallFactory and Making and Processing Asynchronous Calls.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ICancelMethodCalls">
+			<summary>Manages method call cancellation requests. For more information, see Non-Blocking Method Calls and ICancelMethodCalls.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IChannelHook">
+			<summary>Provides a mechanism to intercept and modify calls when the COM engine processes the calls.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IClassActivator">
+			<summary>Retrieves a class object. Not used.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IClassFactory">
+			<summary>Creates an instance of a class of a specific type. For more information, see IClassFactory.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IClassFactory2">
+			<summary>Creates an instance of a specified class. Supports licensing. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IClassFactory"></see>. For more information, see IClassFactory2.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IClientSecurity">
+			<summary>Gets or sets the security settings of an interface proxy or copies the proxy. For more information, see IClientSecurity.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IComThreadingInfo">
+			<summary>Provides information about the caller's execution thread, including thread and apartment type. For more information, see IComThreadingInfo.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint">
+			<summary>Supports connection points for connectable objects. For more information, see IConnectionPoint.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer">
+			<summary>Supports connection points for connectable objects. Indicates to a client that the object is connectable and provides the <see cref="T:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint"></see> interface. For more information, see IConnectionPointContainer.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IContinue">
+			<summary>Indicates whether or not to continue an operation. Used with remote procedure calls.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IContinueCallback">
+			<summary>Provides a generic callback mechanism for interruptible processes that need to ask an object whether or not to continue. For more information, see IContinueCallback.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IDataAdviseHolder">
+			<summary>Creates and manages advisory connections between a data object and one or more advise sinks. Implements the advisory methods of <see cref="T:Microsoft.VisualStudio.OLE.Interop.IDataObject"></see>. For more information, see IDataAdviseHolder.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IDataObject">
+			<summary>Enables transfer and notification of changes in data. For more information, see IDataObject.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IDirectWriterLock">
+			<summary>Allows only a single writer while enabling multiple readers of a root storage object. For more information, see IDirectWriterLock and IDirectWriterLock - Compound File Implementation.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IDropTarget">
+			<summary>Part of implementing drag-and-drop operations. Implemented by an object that can be a target for data during a drag-and-drop operation. For more information, see IDropTarget.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints">
+			<summary>Enumerates connection points on a connectable object (implementer of <see cref="T:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer"></see>). For more information, see IEnumConnectionPoints.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumConnections">
+			<summary>Enumerates connection points on a connectable object. <see cref="T:Microsoft.VisualStudio.OLE.Interop.IConnectionPointContainer"></see> provides the <see cref="T:Microsoft.VisualStudio.OLE.Interop.IEnumConnectionPoints"></see> interface; <see cref="T:Microsoft.VisualStudio.OLE.Interop.IConnectionPoint"></see> provides the <see cref="T:Microsoft.VisualStudio.OLE.Interop.IEnumConnections"></see> interface. For more information, see IEnumConnectionPoints and IEnumConnections.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumFORMATETC">
+			<summary>Enumerates an array of FORMATETC structures. This structure is a generalized clipboard format. For more information, see IEnumFORMATETC.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumMoniker">
+			<summary>Enumerates elements of a moniker, or monikers in a table of monikers. For more information, see IEnumMoniker.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumOleDocumentViews">
+			<summary>Enumerates the views a document object supports. For more information, see IEnumOleDocumentViews.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumOleUndoUnits">
+			<summary>Enumerates the undo units on the undo or redo stack. For more information, see IEnumOleUndoUnits.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumOLEVERB">
+			<summary>Enumerates the verbs available for an object. For more information, see IEnumOLEVERB and OLEVERB.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumSTATDATA">
+			<summary>Enumerates an array of structures containing information about advisory connections (sinks) for a data object. For more information, see IEnumSTATDATA and STATDATA.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumSTATPROPSETSTG">
+			<summary>Enumerates an array of structures containing statistical data about the property sets managed by the current <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPropertySetStorage"></see> instance. For more information, see IEnumSTATPROPSETSTG, IEnumSTATPROPSETSTG-Compound File Implementation, and STATPROPSETSTG.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumSTATSTG">
+			<summary>Enumerates an array of structures containing statistical data about open storage, stream, or byte array objects. For more information, see IEnumSTATSTG and STATSTG.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumString">
+			<summary>Enumerates a group of strings. You do not usually need to implement this interface. For more information, see IEnumString.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown">
+			<summary>Enumerates objects implementing the root COM interface, IUnknown. Commonly implemented by a component containing multiple objects. For more information, see IEnumUnknown.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IErrorLog">
+			<summary>Communicates detailed error information between a client and an object. For more information, see IErrorLog.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IExternalConnection">
+			<summary>Manages a server object's count of marshaled, or external, connections. Enables the object to shutdown when appropriate. For more information, see IExternalConnection.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IFillLockBytes">
+			<summary>Enables asynchronous writing to a structured storage byte array. For more information, see IFillLockBytes and How Asynchronous Binding and Storage Work.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IFont">
+			<summary>COM wrapper for a Windows font object. For more information, see IFont and IFont - Ole Implementation.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IForegroundTransfer">
+			<summary>Transfers control of the foreground window to the COM server process. For more information, see IForegroundTransfer.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IGlobalInterfaceTable">
+			<summary>Enables access to an interface from any apartment in a process. For more information, see IGlobalInterfaceTable and COM Threading and Application Architecture in COM+ Applications.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IInternalUnknown">
+			<summary>Provides access to the internal interfaces of a proxy. For more information, see IInternalUnknown.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ILayoutStorage">
+			<summary>Enables an application to optimize the layout of compound files for efficient downloading across a slow link. For more information, see ILayoutStorage and StorageLayout.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ILockBytes">
+			<summary>Gives a compound file storage object's root storage access to the physical device while isolating it from the details of physical access. For more information, see ILockBytes.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IMalloc">
+			<summary>Allocates, frees, and manages memory. In general, use an existing implementation such as that provided by the CoGetMalloc function. For more information, see IMalloc.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IMallocSpy">
+			<summary>Enables monitoring of memory allocation, detection of memory leaks, and simulation of memory failure in calls to IMalloc methods. For more information, see IMallocSpy.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IMarshal">
+			<summary>Enables a COM object to define and manage the marshaling of its interface pointers. Marshaling is packaging data for transmission to another process or machine. For more information, see IMarshal and IMarshal—Default Implementation.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IMessageFilter">
+			<summary>Enables handling of incoming and outgoing COM messages while waiting for responses from synchronous calls. You can use message filtering to prevent waiting on a synchronous call from blocking another application. For more information, see IMessageFilter.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IMoniker">
+			<summary>Enables access to an object through its moniker which allows access without information about the location of the object. For more information, see IMoniker and the references to different implementations such as IMoniker—Class Moniker Implementation.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IMultiQI">
+			<summary>Enables querying about multiple interfaces in a single call. Used to minimize the overhead of queries in remote procedure calls. For more information, see IMultiQI.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite">
+			<summary>Provides simple communication between an object and the site in the container. For more information, see IObjectWithSite.</summary>
+		</member>
+		<member name="M:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite.GetSite(System.Guid@,System.IntPtr@)">
+			<param name="ppvSite"> </param>
+			<param name="riid"> </param>
+		</member>
+		<member name="M:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite.SetSite(System.Object)">
+			<param name="pUnkSite"> </param>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleClientSite">
+			<summary>Gives an embedded object information about resources provided by its container such as the location and extent of its display site, its moniker, and its user interface. For more information, see IOleClientSite.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget">
+			<summary>Enables the dispatching of commands between objects and containers. For more information, see IOleCommandTarget</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleComponent">
+			<summary>Provides components needing idle time, such as packages that manage modeless top-level windows, with access to the message loop and other facilities. Register the interface with the component manager, <see cref="T:Microsoft.VisualStudio.OLE.Interop.IOleComponentManager"></see>.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleComponentManager">
+			<summary>Defines a component manager, a component that coordinates other components with its message loop for message processing and allocation of idle time. You can get an instance of the interface from the <see cref="T:Microsoft.VisualStudio.OLE.Interop.SOleComponentManager"></see> (SID_SOleComponentManager) service.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleContainer">
+			<summary>Enumerates objects in a compound document or locks a container. For more information, see IOleContainer.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleControl">
+			<summary>Supports keyboard mnemonics, properties, and events for control objects. For more information, see IOleControl.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleControlSite">
+			<summary>Manages embedded controls in a container. Used by site objects. For more information, see IOleControlSite.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleDocument">
+			<summary>Creates or enumerates views and provides other information. Implemented by a document for use by a container. For more information, see IOleDocument.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleDocumentSite">
+			<summary>Enables a document object to directly instruct its client site to activate it as a document object. Implemented by the container. For more information, see IOleDocumentSite.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleDocumentView">
+			<summary>Provides communication between a container and each view supported by a document object. For more information, see IOleDocumentView.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceActiveObject">
+			<summary>Enables a top-level container to manipulate an in-place object. For information on the COM interface, see IOleInPlaceActiveObject.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceFrame">
+			<summary>Controls the container's top-level frame, including menus, keyboard responses, and dialogs. For more information, see IOleInPlaceFrame.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceObject">
+			<summary>Manages the activation, deactivation, and visibility of in-place objects. For more information, see IOleInPlaceObject.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceObjectWindowless">
+			<summary>Enables a windowless object to process window messages and take part in drag-and-drop operations. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceObject"></see>. For more information, see IOleInPlaceObjectWindowless.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceSite">
+			<summary>Manages the interaction between the container and the object's in-place client site. For more information, see IOleInPlaceSite.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceSiteEx">
+			<summary>Provides additional activation and deactivation notification methods to avoid screen flashing when activating or deactivating an object. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceSite"></see>. For more information, see IOleInPlaceSiteEx.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceSiteWindowless">
+			<summary>Enables a windowless object to process window messages, participate in drag-and-drop operations, and draw. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceSiteEx"></see>. For more information, see IOleInPlaceSiteWindowless.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleInPlaceUIWindow">
+			<summary>Negotiates border space on the document or frame window. For information, see IOleInPlaceUIWindow.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleObject">
+			<summary>Enables an embedded object to provide basic functionality to its container. For information, see IOleObject.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleParentUndoUnit">
+			<summary>Enables undo units to contain child undo units and thus to support complex undo actions. For more information, see IOleParentUndoUnit.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleUndoManager">
+			<summary>Enables containers to implement multi-level undo and redo operations for actions in contained controls. For more information, see IOleUndoManager.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleUndoUnit">
+			<summary>Defines an undo unit, a component containing the information necessary to undo or redo a single action. For more information, see IOleUndoUnit.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IOleWindow">
+			<summary>Enables an application to get handles to the windows participating in in-place activation, and to enter and exit context-sensitive help mode. For more information, see IOleWindow.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IParseDisplayName">
+			<summary>Translates a user-readable display name into a moniker object. For more information, see IParseDisplayName.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPerPropertyBrowsing">
+			<summary>Accesses the information displayed in an object's property pages. For more information, see IPerPropertyBrowsing.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPersist">
+			<summary>Gets the class identifier (CLSID) of an object that can be persisted (stored) in the system. For more information, see IPersist.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPersistFile">
+			<summary>Enables an object to be saved or loaded to a disk file. Inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPersist"></see>. For more information, see IPersistFile.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPersistMemory">
+			<summary>Saves and loads objects from a stream. Inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPersist"></see>. For more information, see IPersistMemory.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPersistPropertyBag">
+			<summary>Defines a property-based persistence system. Inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPersist"></see>. For more information, see IPersistPropertyBag.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPersistPropertyBag2">
+			<summary>Defines a property-based persistence system. Extends <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPropertyBag"></see> and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPersist"></see>. For more information, see IPersistPropertyBag2.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPersistStorage">
+			<summary>Enables a container to pass a storage object to a contained object and to save and to load the object. Inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPersist"></see>. For more information, see IPersistStorage.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPersistStream">
+			<summary>Saves and loads objects using a simple stream. Inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPersist"></see>. For more information, see IPersistStream.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPersistStreamInit">
+			<summary>Saves and loads objects from a stream. Replaces <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPersistStream"></see> and adds an initialization method. Inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPersist"></see>. For more information, see IPersistStreamInit.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPointerInactive">
+			<summary>Enables an inactive object to receive mouse and keyboard messages. For more information, see IPointerInactive.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPrint">
+			<summary>Supports programmatic printing for an object. For more information, see IPrint.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IProcessInitControl">
+			<summary>Enables specification of a time-out interval for initialization of a process. For more information, see IProcessInitControl.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IProgressNotify">
+			<summary>Enables objects to receive notice about the progress of a download. For more information, see IProgressNotify.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPropertyBag">
+			<summary>Sets and retrieves values for particular properties. For more information, see IPropertyBag.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPropertyBag2">
+			<summary>Sets and retrieves values for particular properties. Extends, but does not inherit from, <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPropertyBag"></see>. Adds methods to retrieve type information about a property. For more information, see IPropertyBag2.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPropertyNotifySink">
+			<summary>Enables an object to receive notification of property changes on objects that use the interface as an outgoing interface. For more information, see IPropertyNotifySink.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPropertyPage">
+			<summary>Defines the main features of an object representing property pages. For more information, see IPropertyPage.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPropertyPage2">
+			<summary>Defines the main features of an object representing property pages. Adds support for an initial selection of a property on a page. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPropertyPage"></see>. For more information, see IPropertyPage2.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPropertyPageSite">
+			<summary>Provides the main features for a property pages site. Each property page within a property frame has a site. For more information, see IPropertyPageSite.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPropertySetStorage">
+			<summary>Creates, opens, deletes, and enumerates storage of property sets supporting the <see cref="T:Microsoft.VisualStudio.OLE.Interop.IPropertyStorage"></see> interface. For more information, see IPropertySetStorage.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPropertyStorage">
+			<summary>Manages the persistent properties of a single property set. For more information, see IPropertyStorage and IPropertySetStorage.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo">
+			<summary>Provides the type information (<see cref="T:Microsoft.VisualStudio.OLE.Interop.ITypeInfo"></see>) for a given coclass (Component Automation). For more information, see IProvideClassInfo.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo2">
+			<summary>Provides the type information (<see cref="T:Microsoft.VisualStudio.OLE.Interop.ITypeInfo"></see>) for a given coclass (Component Automation). Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo"></see>. Provides an easier method to get the default event set. For more information, see IProvideClassInfo.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IProvideMultipleClassInfo">
+			<summary>Retrieves type information from a component that may have multiple coclasses. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IProvideClassInfo2"></see>. For more information, see IProvideMultipleClassInfo.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IPSFactoryBuffer">
+			<summary>Creates proxies and stubs for remote invocation. For more information, see IPSFactoryBuffer.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IQuickActivate">
+			<summary>Decreases the time to activate a control by combining loading and initialization into a single call. For more information, see IQuickActivate.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRecordInfo">
+			<summary>Describes the structure of a user-defined type (UDT) stored in a variant. For more information, see IRecordInfo.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRootStorage">
+			<summary>Switches the underlying file of a storage object to a different file and saves the object to that file. For more information, see IRootStorage.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IROTData">
+			<summary>Retrieves data to enable the Running Object Table (ROT) to compare monikers. For more information, see IROTData.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRpcChannelBuffer">
+			<summary>Marshals data between a COM client proxy and a COM server stub. For more information, see IRpcChannelBuffer.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRpcChannelBuffer2">
+			<summary>Marshals data between a COM client proxy and a COM server stub. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IRpcChannelBuffer"></see>. Adds a method to retrieve the protocol version.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRpcChannelBuffer3">
+			<summary>Marshals data between a COM client proxy and a COM server stub. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IRpcChannelBuffer2"></see>.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRpcHelper">
+			<summary>Provides helper methods for remote procedure calls. Methods provide DCOM protocol version and convert an object reference to an interface identifier.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRpcOptions">
+			<summary>Sets or gets the values of properties controlling how COM handles remote procedure calls (RPC). For more information, see IRpcOptions.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRpcProxyBuffer">
+			<summary>Controls the remote procedure call (RPC) proxy used to marshal data between COM components. For more information, see IRpcProxyBuffer.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRpcStubBuffer">
+			<summary>Controls the remote procedure calls (RPC) stub used to marshal data between COM components. For more information, see IRpcStubBuffer.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRpcSyntaxNegotiate">
+			<summary>Negotiates syntax between components in remote procedure calls (RPC). An array of <see cref="T:Microsoft.VisualStudio.OLE.Interop.RPCOLEMESSAGE"></see> objects represents the syntax.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRunnableObject">
+			<summary>Enables a container to control the running of its embedded objects. For more information, see IRunnableObject.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IRunningObjectTable">
+			<summary>Manages access to the Running Object Table (ROT), a global look-up table. You can get an instance of the interface from the <see cref="M:Microsoft.VisualStudio.OLE.Interop.IBindCtx.GetRunningObjectTable(Microsoft.VisualStudio.OLE.Interop.IRunningObjectTable@)"></see> method. For more information, see IRunningObjectTable.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISequentialStream">
+			<summary>Supports simple sequential access to streams. For more information, see ISequentialStream.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IServerSecurity">
+			<summary>Used by a server to authenticate a client and to manage impersonation of a client. For more information, see IServerSecurity.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IServiceProvider">
+			<summary>Provides access to a service identified by a globally unique identifier (GUID). For more information, see IServiceProvider.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISimpleFrameSite">
+			<summary>Supports simple frame controls serving as containers for other controls. For more information, see ISimpleFrameSite.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISpecifyPropertyPages">
+			<summary>Indicates an object supports property pages and retrieves those pages. For more information, see ISpecifyPropertyPages.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IStdMarshalInfo">
+			<summary>Specifies the handler to use in the destination process during standard marshaling. For more information, see IStdMarshalInfo.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IStorage">
+			<summary>Supports creation and management of structured storage objects which enable. hierarchical storage of information within a single file. For more information, see IStorage.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IStream">
+			<summary>Reads and writes data to stream objects. For more information, see IStream.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISurrogate">
+			<summary>Loads or frees a surrogate. A surrogate is an EXE file that can load DLL servers to give them the advantages of being an EXE server. For more information, see ISurrogate.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISynchronize">
+			<summary>Provides asynchronous communication between objects about events. For more information, see ISynchronize.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISynchronizeContainer">
+			<summary>Manages a group of synchronization objects. For more information, see ISynchronizeContainer.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISynchronizeEvent">
+			<summary>Assigns a Win32 event handle to a synchronization object. For more information, see ISynchronizeEvent.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISynchronizeHandle">
+			<summary>Retrieves the Win32 handle from a synchronization object. For more information, see ISynchronizeHandle.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ISynchronizeMutex">
+			<summary>Supports a synchronization object using a mutex object. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.ISynchronize"></see>. For general information about mutex objects, see Mutex Class.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ITypeComp">
+			<summary>Provides information compilers need when binding and instantiating structures and interfaces. For more information, see ITypeComp.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ITypeInfo">
+			<summary>Provides information, from a type library, about an object and its capabilities. For more information, see ITypeInfo.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.ITypeLib">
+			<summary>Provides access to the contents of a type library. For more information, see ITypeLib.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IViewObject">
+			<summary>Enables an object to display itself without passing a data object to the caller. For more information, see IViewObject.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IViewObject2">
+			<summary>Enables an object to display itself without passing a data object to the caller. Also returns the size of the drawing for a given view of an object. Extends and inherits from <see cref="T:Microsoft.VisualStudio.OLE.Interop.IViewObject"></see>. For more information, see IViewObject2.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IViewObjectEx">
+			<summary>Adds better drawing, hit-testing for non-rectangular objects, and sizing to the capabilities of <see cref="T:Microsoft.VisualStudio.OLE.Interop.IViewObject2"></see>. For more information, see IViewObjectEx.</summary>
+		</member>
+		<member name="T:Microsoft.VisualStudio.OLE.Interop.IWaitMultiple">
+			<summary>Enables waiting for a group of cross-process calls.</summary>
+		</member>
+	</members>
+</doc>

@@ -1,0 +1,94 @@
++==================================================================+
+| Changes to Castle Visual Studio Integration and Castle NVelocity |
++==================================================================+
+
+Unreleased Changes
+==================
+- n/a
+
+0.3.2 Beta (2008-09-30)
+=======================
+- Fixed memory issues causing Visual Studio lock ups (reported by Alex Henderson and Chuck Snell)
+- Fixed null reference exception reported in error window (reported by Alex Henderson)
+- Fixed editor loosing colourisation when typing % in a dictionary (reported by Chuck Snell)
+- Fixed error with XHTML attributes only having a # as their content being parsed as the start of a
+  directive (reported by Chuck Snell)
+
+0.3.1 Beta (2008-08-15)
+=======================
+- Fixed the CVSI installer so that it displays "Configuring Visual Studio 200x..." when devenv is
+  running instead of a blank message.
+- Several fixes to the IntelliSense so that the directive list displays in more places.
+- Hopefully fixed the issue causing CVSI to endlessly create error objects until your system runs out
+  of memory.
+
+0.3.0 Beta (2008-06-29)
+=======================
+- Upgraded CVSI so that it works in Visual Studio 2008.
+- Created separate C# project files for VS2005 and VS2008.
+- Created a WiX/MSI setup package to install CVSI for VS2005 and VS2008.
+- Added a NAnt build script to build assemblies and the WiX setup.
+- Implemented basic XHTML IntelliSense.
+- Fixed the IntelliSense so that it finds helpers and view components that do not directly inherit
+  from the MonoRail abstract classes.
+- Fixed the IntelliSense so that it works with non-web application projects (e.g. class libraries).
+
+0.2.2 Alpha (2008-01-13)
+========================
+- Fixed CONTRIB-41: Implement folding
+- Fixed CONTRIB-53: Colorization stops when quoting attributes using single quotes
+- Fixed CONTRIB-51: Coloring for #Component (and maybe other hashes) requires a space before }
+- Fixed CONTRIB-58: The coloriser doesn't treat a newline as the end of an identifier
+- Removed the property that was set making spaces the default option when first installed. It should now
+  use your settings default.
+- Fixed several minor parsing errors.
+
+0.2.1 Alpha (2007-10-29)
+========================
+- Disabled semantic checking on designators because most variables are dynamic and cannot be checked
+  if they exist in the scope.
+- Removed code to run the parser in another thread.
+- Fixed the parser so that it cannot get into an endless loop.
+- Implemented various syntax for XML and NVelocity.
+- Fixed various parser bugs.
+- Added a hardcoded ignored assemblies list to MonoRail IntelliSense Provider to speed up the IntelliSense.
+- Created a Language Service Debug Window for a tradeshow demostration, this can be used to debug the
+  parsing+AST and scopes.
+- Fixed parsing of foreach directive and created a scope in the ForeachDirective which the iterator of
+  the loop is added to. Also fixed up intellisense to find the scope for the current position instead
+  of using the template's scope.
+
+0.2.0 Alpha (2007-10-09)
+========================
+- Completed most of the basic IntelliSense and the NVelocity parser.
+
+0.1.3 Preview 1 Update (2007-07-27)
+===================================
+- Fixed CONTRIB-49: "Wrong colorization"
+  - Directive parameters are now only scanned for on the same line as the start of the directive.
+- Fixed CONTRIB-37: "double clicking to select a word selects more than it needs to, or sometimes nothing."
+  - All words and sets of spaces in all states are now returned to Visual Studio as seperate tokens
+    when the scanner 'SplitTextTokens' option is enabled.
+- Fixed CONTRIB-35: "Problem with colorizer with multiple files open"
+  - Each file now has a seperate NVelocity Line Scanner and Castle.NVelocity scanner.
+- Fixed CONTRIB-45: "Implement a different coloring for non-syntax-colored sections"
+  - CDATA sections were made gray in the previous release so script elements are now treated as a normal
+    XML element and requires a CDATA block otherwise the JavaScript will be scanned for XML tags as does
+    the Visual Studio XML editor.
+- Fixed various other unreported bugs.
+- Implemented functionality into the scanner to support a LL(k) parser.
+
+0.1.2 Preview 1 Update (2007-07-13)
+===================================
+- Fixed CONTRIB-43: "Crash when inserting <![CDATA["
+
+0.1.1 Preview 1 Update (2007-07-12)
+===================================
+- Fixed CONTRIB-36: "Pound Sign As A Literal Causes Trouble"
+- Fixed various bugs with directives and references in different states that relates to CONTRIB-36.
+- Changed the error messages so that the scanner state name displayed is more friendly.
+- Made directive left and right parentheses colourise the same as the hash and name (default blue).
+
+0.1.0 Preview 1 (2007-07-01)
+============================
+- Initial Public Release as a MSI.

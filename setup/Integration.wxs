@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?define BuildCommonBinDir = "..\..\build\bin\common" ?>
+	<?define BuildVS2005BinDir = "..\..\build\bin\vs2005" ?>
+	<?define BuildVS2008BinDir = "..\..\build\bin\vs2008" ?>
+	<?define VS2005LibDir = "..\..\lib\VS2005" ?>
+	<?define VS2008LibDir = "..\..\lib\VS2008" ?>
+	<Fragment>
+		<!--Visual Studio 2005 Integration -->
+		<DirectoryRef Id="VS2005BinDir">
+			<Component Id="Component_VS2005" DiskId="1" Guid="1BACA8A3-77E5-4E0A-873D-EF0BA6FFD7ED" KeyPath="yes">
+				<!-- VS2005 Specific Binaries -->
+				<File Id="File_VS2005_Castle_VisualStudio_NVelocityLanguageService" Name="Castle.VisualStudio.NVelocityLanguageService.dll"
+						Checksum="yes" Source="$(var.BuildVS2005BinDir)\Castle.VisualStudio.NVelocityLanguageService.dll" Vital="yes" />
+
+				<!-- Common Binaries -->
+				<File Id="File_VS2005_Castle_NVelocity" Name="Castle.NVelocity.dll"
+						Checksum="yes" Source="$(var.BuildCommonBinDir)\Castle.NVelocity.dll" Vital="yes" />
+				<File Id="File_VS2005_Castle_VisualStudio_MonoRailIntelliSenseProvider" Name="Castle.VisualStudio.MonoRailIntelliSenseProvider.dll"
+						Checksum="yes" Source="$(var.BuildCommonBinDir)\Castle.VisualStudio.MonoRailIntelliSenseProvider.dll" Vital="yes" />
+				<File Id="File_VS2005_Mono_Cecil" Name="Mono.Cecil.dll"
+						Checksum="yes" Source="$(var.BuildCommonBinDir)\Mono.Cecil.dll" Vital="yes" />
+
+				<!-- VS2005 MPF Binaries -->
+				<File Id="File_VS2005_Microsoft_VisualStudio_OLE_Interop" Name="Microsoft.VisualStudio.OLE.Interop.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.OLE.Interop.dll" Vital="yes" />
+				<File Id="File_VS2005_Microsoft_VisualStudio_Package_LanguageService" Name="Microsoft.VisualStudio.Package.LanguageService.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.Package.LanguageService.dll" Vital="yes" />
+				<File Id="File_VS2005_Microsoft_VisualStudio_Shell" Name="Microsoft.VisualStudio.Shell.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.Shell.dll" Vital="yes" />
+				<File Id="File_VS2005_Microsoft_VisualStudio_Shell_Interop" Name="Microsoft.VisualStudio.Shell.Interop.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.Shell.Interop.dll" Vital="yes" />
+				<File Id="File_VS2005_Microsoft_VisualStudio_Shell_Interop_8_0" Name="Microsoft.VisualStudio.Shell.Interop.8.0.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.Shell.Interop.8.0.dll" Vital="yes" />
+				<File Id="File_VS2005_Microsoft_VisualStudio_TextManager_Interop" Name="Microsoft.VisualStudio.TextManager.Interop.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.TextManager.Interop.dll" Vital="yes" />
+				<File Id="File_VS2005_Microsoft_VisualStudio_TextManager_Interop_8_0" Name="Microsoft.VisualStudio.TextManager.Interop.8.0.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" Vital="yes" />
+
+				<!-- Language Service Package Registration -->
+				<?include LanguageServiceRegistration.VS2005.wxi ?>
+			</Component>
+		</DirectoryRef>
+
+		<!--Visual Studio 2008 Integration -->
+		<DirectoryRef Id="VS2008BinDir">
+			<Component Id="Component_VS2008" DiskId="1" Guid="2B7F1431-7C59-4B1C-8FDA-0D7A11F22E26" KeyPath="yes">
+				<!-- VS2008 Specific Binaries -->
+				<File Id="File_VS2008_Castle_VisualStudio_NVelocityLanguageService" Name="Castle.VisualStudio.NVelocityLanguageService.dll"
+							Checksum="yes" Source="$(var.BuildVS2008BinDir)\Castle.VisualStudio.NVelocityLanguageService.dll" Vital="yes" />
+
+				<!-- Common Binaries -->
+				<File Id="File_VS2008_Castle_NVelocity" Name="Castle.NVelocity.dll"
+							Checksum="yes" Source="$(var.BuildCommonBinDir)\Castle.NVelocity.dll" Vital="yes" />
+				<File Id="File_VS2008_Castle_VisualStudio_MonoRailIntelliSenseProvider" Name="Castle.VisualStudio.MonoRailIntelliSenseProvider.dll"
+							Checksum="yes" Source="$(var.BuildCommonBinDir)\Castle.VisualStudio.MonoRailIntelliSenseProvider.dll" Vital="yes" />
+				<File Id="File_VS2008_Mono_Cecil" Name="Mono.Cecil.dll"
+							Checksum="yes" Source="$(var.BuildCommonBinDir)\Mono.Cecil.dll" Vital="yes" />
+
+				<!-- VS2005 MPF Binaries -->
+				<File Id="File_VS2008_Microsoft_VisualStudio_OLE_Interop" Name="Microsoft.VisualStudio.OLE.Interop.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.OLE.Interop.dll" Vital="yes" />
+				<File Id="File_VS2008_Microsoft_VisualStudio_Shell_Interop" Name="Microsoft.VisualStudio.Shell.Interop.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.Shell.Interop.dll" Vital="yes" />
+				<File Id="File_VS2008_Microsoft_VisualStudio_Shell_Interop_8_0" Name="Microsoft.VisualStudio.Shell.Interop.8.0.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.Shell.Interop.8.0.dll" Vital="yes" />
+				<File Id="File_VS2008_Microsoft_VisualStudio_TextManager_Interop" Name="Microsoft.VisualStudio.TextManager.Interop.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.TextManager.Interop.dll" Vital="yes" />
+				<File Id="File_VS2008_Microsoft_VisualStudio_TextManager_Interop_8_0" Name="Microsoft.VisualStudio.TextManager.Interop.8.0.dll"
+						Checksum="yes" Source="$(var.VS2005LibDir)\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" Vital="yes" />
+
+				<!-- VS2008 MPF Binaries -->
+				<File Id="File_VS2008_Microsoft_VisualStudio_Package_LanguageService_9_0" Name="Microsoft.VisualStudio.Package.LanguageService.9.0.dll"
+						Checksum="yes" Source="$(var.VS2008LibDir)\Microsoft.VisualStudio.Package.LanguageService.9.0.dll" Vital="yes" />
+				<File Id="File_VS2008_Microsoft_VisualStudio_Shell_9_0" Name="Microsoft.VisualStudio.Shell.9.0.dll"
+						Checksum="yes" Source="$(var.VS2008LibDir)\Microsoft.VisualStudio.Shell.9.0.dll" Vital="yes" />
+				<File Id="File_VS2008_Microsoft_VisualStudio_Shell_Interop_9_0" Name="Microsoft.VisualStudio.Shell.Interop.9.0.dll"
+						Checksum="yes" Source="$(var.VS2008LibDir)\Microsoft.VisualStudio.Shell.Interop.9.0.dll" Vital="yes" />
+
+				<!-- Language Service Package Registration -->
+				<?include LanguageServiceRegistration.VS2008.wxi ?>
+			</Component>
+		</DirectoryRef>
+  </Fragment>
+</Wix>

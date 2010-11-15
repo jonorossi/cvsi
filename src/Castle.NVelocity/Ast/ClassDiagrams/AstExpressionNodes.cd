@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Castle.NVelocity.Ast.NVExpression" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVExpression.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVNumExpression" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVNumExpression.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVBoolExpression" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVBoolExpression.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVBinaryExpression" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Ast\NVBinaryExpression.cs</FileName>
+      <HashCode>AAAAEAAAAAAAAAAAAAQAAAAAAAAAEAAAAAQAAQAACAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVLiteralExpression" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Ast\NVLiteralExpression.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVStringExpression" Collapsed="true">
+    <Position X="3.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Ast\NVStringExpression.cs</FileName>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

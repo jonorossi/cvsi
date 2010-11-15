@@ -1,0 +1,125 @@
+<?xml version="1.0" ?>
+<project name="CVSI" default="release" xmlns="http://tempuri.org/nant-donotuse.xsd">
+	<!-- User targets -->
+	<target name="release" depends="clean, init, copy-dependencies, compile, build-setup" />
+
+	<!-- Internal targets -->
+	<target name="clean">
+		<delete dir="build" if="${directory::exists('build')}" />
+	</target>
+
+	<target name="init">
+		<mkdir dir="build" />
+		<mkdir dir="build\bin" />
+		<mkdir dir="build\bin\common" />
+		<mkdir dir="build\bin\vs2005" />
+		<mkdir dir="build\bin\vs2008" />
+		<mkdir dir="build\setup" />
+	</target>
+
+	<target name="copy-dependencies">
+		<copy todir="build\bin\common" flatten="true" file="lib\Mono.Cecil.dll" />
+	</target>
+
+	<target name="compile">
+		<!-- Castle.NVelocity.dll -->
+		<csc target="library" output="build\bin\common\Castle.NVelocity.dll"
+				keyfile="..\..\Castle.NVelocity\trunk\src\Castle.NVelocity\Castle.NVelocity.snk">
+			<sources>
+				<include name="..\..\Castle.NVelocity\trunk\src\Castle.NVelocity\**\*.cs" />
+			</sources>
+		</csc>
+
+		<!-- Castle.VisualStudio.MonoRailIntelliSenseProvider.dll -->
+		<csc target="library" output="build\bin\common\Castle.VisualStudio.MonoRailIntelliSenseProvider.dll"
+				keyfile="src\Castle.VisualStudio.MonoRailIntelliSenseProvider\Castle.VisualStudio.MonoRailIntelliSenseProvider.snk">
+			<sources>
+				<include name="src\Castle.VisualStudio.MonoRailIntelliSenseProvider\**\*.cs" />
+			</sources>
+			<references>
+				<include name="build\bin\common\Castle.NVelocity.dll" />
+				<include name="build\bin\common\Mono.Cecil.dll" />
+			</references>
+		</csc>
+
+		<!-- Castle.VisualStudio.NVelocityLanguageService.dll for Visual Studio 2005-->
+		<csc target="library" output="build\bin\vs2005\Castle.VisualStudio.NVelocityLanguageService.dll"
+				keyfile="src\Castle.VisualStudio.NVelocityLanguageService\Castle.VisualStudio.NVelocityLanguageService.snk">
+			<sources>
+				<include name="src\Castle.VisualStudio.NVelocityLanguageService\**\*.cs" />
+			</sources>
+			<resources>
+				<include name="src\Castle.VisualStudio.NVelocityLanguageService\**\*.resx" />
+			</resources>
+			<references>
+				<include name="build\bin\common\Castle.NVelocity.dll" />
+				<include name="build\bin\common\Castle.VisualStudio.MonoRailIntelliSenseProvider.dll" />
+
+				<!-- VS2005 Binaries -->
+				<include name="lib\VS2005\Microsoft.VisualStudio.OLE.Interop.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.Package.LanguageService.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.Shell.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.Shell.Interop.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.TextManager.Interop.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+			</references>
+		</csc>
+
+		<!-- Castle.VisualStudio.NVelocityLanguageService.dll for Visual Studio 2008-->
+		<csc target="library" define="VS2008" output="build\bin\vs2008\Castle.VisualStudio.NVelocityLanguageService.dll"
+				keyfile="src\Castle.VisualStudio.NVelocityLanguageService\Castle.VisualStudio.NVelocityLanguageService.snk">
+			<sources>
+				<include name="src\Castle.VisualStudio.NVelocityLanguageService\**\*.cs" />
+			</sources>
+			<resources>
+				<include name="src\Castle.VisualStudio.NVelocityLanguageService\**\*.resx" />
+			</resources>
+			<references>
+				<include name="build\bin\common\Castle.NVelocity.dll" />
+				<include name="build\bin\common\Castle.VisualStudio.MonoRailIntelliSenseProvider.dll" />
+
+				<!-- VS2005 Binaries -->
+				<include name="lib\VS2005\Microsoft.VisualStudio.OLE.Interop.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.Shell.Interop.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.TextManager.Interop.dll" />
+				<include name="lib\VS2005\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+
+				<!-- VS2008 Binaries -->
+				<include name="lib\VS2008\Microsoft.VisualStudio.Package.LanguageService.9.0.dll" />
+				<include name="lib\VS2008\Microsoft.VisualStudio.Shell.9.0.dll" />
+				<include name="lib\VS2008\Microsoft.VisualStudio.Shell.Interop.9.0.dll" />
+			</references>
+		</csc>
+	</target>
+
+	<target name="build-setup">
+		<exec program="tools\WiX\bin\candle.exe">
+			<!-- Set the output directory -->
+			<arg value="-out" />
+			<arg dir="build\setup\" />
+			<!-- Change warning level, treat warnings as errors and suppress warning 1080 -->
+			<arg value="-pedantic" />
+			<arg value="-wx" />
+			<arg value="-sw1080" />
+			<!-- Add input WiX source files -->
+			<arg file="setup\Product.wxs" />
+			<arg file="setup\Integration.wxs" />
+		</exec>
+
+		<exec program="tools\WiX\bin\light.exe">
+			<!-- Set the output MSI -->
+			<arg value="-out" />
+			<arg dir="build\setup\CVSI-0.3.2.msi" />
+			<!-- Add WiX extension -->
+			<arg value="-ext" />
+			<arg file="tools\WiX\bin\WixUIExtension.dll" />
+			<!-- Set UI culture -->
+			<arg value="-cultures:en-US" />
+			<!-- Add input object files -->
+			<arg file="build\setup\Product.wixobj" />
+			<arg file="build\setup\Integration.wixobj" />
+		</exec>
+	</target>
+</project>

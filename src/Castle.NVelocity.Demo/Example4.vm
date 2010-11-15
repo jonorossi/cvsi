@@ -1,0 +1,62 @@
+<!-- this is
+a multiline XML comment -->
+
+<div
+class="someClass"/>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+a<bc this="" class="heysaa" />
+
+this is another line = $hey dude ${hey} something more
+
+#if($hey) some text #end yay
+
+## this is a NVelocity comment
+
+#if()
+
+#* hey
+This is an example NVelocity file for demostrating code colouring.
+*#
+#if ($var.Method("Text", $xyz, 10) == "Some Text")
+  <ul class="changes">
+  ## This is a comment
+  #foreach ($item in $collection)
+    #if ($item.SomeProp() == "TextTextText" && $item.Active)
+      <li><strong>$item.Name</strong>$item.Value</li>
+    #else
+      <li#if($someVar) class="active"#end>${item.Text}</li>
+    #end
+  #end
+#end
+
+$Form.FormTag("%{action='create', immediate='true', useTitles='true'}")
+$Form.EndFormTag
+
+#foreach($person in $people)
+#beforeall
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+#before
+        <tr
+#odd
+        style="color:gray">
+#even
+        style="color:white">
+#each
+        <td>$person.Name</td>
+        <td>$person.Age</td>
+#after
+        </tr>
+#between
+        <tr><td colspan="2">$person.bio</td></tr>
+#afterall
+    </table>
+#nodata
+    Sorry No Person Found
+#end

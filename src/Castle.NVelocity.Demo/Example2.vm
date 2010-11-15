@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="style.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+xml text <span id="someText" class="">text</span>
+some more <strong>xml text</strong>
+and self closing <br />
+nested <div>a<div>b</div>c</div>
+xml<!-- inside the comment -->outside
+#if ($varName1 == $varName2)
+  #{if}($a >= $b)someText#end
+#else
+  Some text
+#end
+## inside a NVelocity comment
+normal text on the next line ## a comment at the end of a line
+text#* multiline
+comment *#text

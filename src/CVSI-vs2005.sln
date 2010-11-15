@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9E96BF44-5C5D-40F1-A535-136A57055774}"
+	ProjectSection(SolutionItems) = preProject
+		..\doc\Changes.txt = ..\doc\Changes.txt
+		..\default.build = ..\default.build
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.VisualStudio.MonoRailIntelliSenseProvider-vs2005", "Castle.VisualStudio.MonoRailIntelliSenseProvider\Castle.VisualStudio.MonoRailIntelliSenseProvider-vs2005.csproj", "{BE986703-71CC-46FB-B7AF-86E8716F73FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.VisualStudio.MonoRailIntelliSenseProvider.Demo-vs2005", "Castle.VisualStudio.MonoRailIntelliSenseProvider.Demo\Castle.VisualStudio.MonoRailIntelliSenseProvider.Demo-vs2005.csproj", "{83D5CE89-EA50-4DC3-82D1-4F2EF1BDEDF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.VisualStudio.NVelocityLanguageService-vs2005", "Castle.VisualStudio.NVelocityLanguageService\Castle.VisualStudio.NVelocityLanguageService-vs2005.csproj", "{115FD4BC-FECE-45BF-9461-CF5C63604425}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.VisualStudio.NVelocityLanguageService.DebugWindow-vs2005", "Castle.VisualStudio.NVelocityLanguageService.DebugWindow\Castle.VisualStudio.NVelocityLanguageService.DebugWindow-vs2005.csproj", "{459A0B38-9A3B-4E99-920E-0665E8602662}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity-vs2005", "..\..\..\Castle.NVelocity\trunk\src\Castle.NVelocity\Castle.NVelocity-vs2005.csproj", "{B37F690C-A4FA-4BC0-AD74-0898624081D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity.Demo-vs2005", "..\..\..\Castle.NVelocity\trunk\src\Castle.NVelocity.Demo\Castle.NVelocity.Demo-vs2005.csproj", "{A124C35A-B42E-4759-8C40-080278F0B136}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity.Tests-vs2005", "..\..\..\Castle.NVelocity\trunk\src\Castle.NVelocity.Tests\Castle.NVelocity.Tests-vs2005.csproj", "{79320FC3-082F-4AB3-9974-E0E252635BDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{E043A476-855B-4167-ABDF-D5FEEA28672F}"
+	ProjectSection(SolutionItems) = preProject
+		..\setup\Integration.wxs = ..\setup\Integration.wxs
+		..\setup\LanguageServiceRegistration.VS2005.wxi = ..\setup\LanguageServiceRegistration.VS2005.wxi
+		..\setup\LanguageServiceRegistration.VS2008.wxi = ..\setup\LanguageServiceRegistration.VS2008.wxi
+		..\setup\Product.wxs = ..\setup\Product.wxs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE986703-71CC-46FB-B7AF-86E8716F73FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE986703-71CC-46FB-B7AF-86E8716F73FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE986703-71CC-46FB-B7AF-86E8716F73FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE986703-71CC-46FB-B7AF-86E8716F73FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D5CE89-EA50-4DC3-82D1-4F2EF1BDEDF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D5CE89-EA50-4DC3-82D1-4F2EF1BDEDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D5CE89-EA50-4DC3-82D1-4F2EF1BDEDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D5CE89-EA50-4DC3-82D1-4F2EF1BDEDF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{115FD4BC-FECE-45BF-9461-CF5C63604425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115FD4BC-FECE-45BF-9461-CF5C63604425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115FD4BC-FECE-45BF-9461-CF5C63604425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115FD4BC-FECE-45BF-9461-CF5C63604425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{459A0B38-9A3B-4E99-920E-0665E8602662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{459A0B38-9A3B-4E99-920E-0665E8602662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{459A0B38-9A3B-4E99-920E-0665E8602662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{459A0B38-9A3B-4E99-920E-0665E8602662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37F690C-A4FA-4BC0-AD74-0898624081D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37F690C-A4FA-4BC0-AD74-0898624081D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37F690C-A4FA-4BC0-AD74-0898624081D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37F690C-A4FA-4BC0-AD74-0898624081D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A124C35A-B42E-4759-8C40-080278F0B136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A124C35A-B42E-4759-8C40-080278F0B136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A124C35A-B42E-4759-8C40-080278F0B136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A124C35A-B42E-4759-8C40-080278F0B136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79320FC3-082F-4AB3-9974-E0E252635BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79320FC3-082F-4AB3-9974-E0E252635BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79320FC3-082F-4AB3-9974-E0E252635BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79320FC3-082F-4AB3-9974-E0E252635BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

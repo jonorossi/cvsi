@@ -1,0 +1,40 @@
+<Include>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\8.0\InstalledProducts\Castle Visual Studio Integration">
+    <Registry Name="Package" Value="{a6a23e2b-f7a0-4a97-ba77-e509f573c5fc}" Type="string" />
+    <Registry Name="UseRegNameAsSplashName" Value="1" Type="integer" />
+    <Registry Name="UseInterface" Value="1" Type="integer" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\8.0\Packages\{a6a23e2b-f7a0-4a97-ba77-e509f573c5fc}" Value="Castle.VisualStudio.NVelocityLanguageService.NVelocityPackage, Castle.VisualStudio.NVelocityLanguageService, Version=0.3.2.0, Culture=neutral, PublicKeyToken=3015c0fa8be5e143" Type="string">
+    <Registry Name="InprocServer32" Value="[SystemFolder]mscoree.dll" Type="string" />
+    <Registry Name="Class" Value="Castle.VisualStudio.NVelocityLanguageService.NVelocityPackage" Type="string" />
+    <Registry Name="CodeBase" Value="[#File_VS2005_Castle_VisualStudio_NVelocityLanguageService]" Type="string" />
+    <Registry Name="ID" Value="2005" Type="integer" />
+    <Registry Name="MinEdition" Value="Standard" Type="string" />
+    <Registry Name="ProductVersion" Value="0.3" Type="string" />
+    <Registry Name="ProductName" Value="Castle Visual Studio Integration" Type="string" />
+    <Registry Name="CompanyName" Value="Jonathon Rossi" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\8.0\AutoLoadPackages\{8fe2df1d-e0da-4ebe-9d5c-415d40e487b5}">
+    <Registry Name="{a6a23e2b-f7a0-4a97-ba77-e509f573c5fc}" Value="0" Type="integer" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\8.0\Languages\File Extensions\.njs" Value="{233bafc9-0776-4625-8841-250353e3fc30}" Type="string" />
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\8.0\Languages\File Extensions\.vm" Value="{233bafc9-0776-4625-8841-250353e3fc30}" Type="string" />
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\8.0\Languages\Language Services\NVelocity" Value="{233bafc9-0776-4625-8841-250353e3fc30}" Type="string">
+    <Registry Name="Package" Value="{a6a23e2b-f7a0-4a97-ba77-e509f573c5fc}" Type="string" />
+    <Registry Name="LangResID" Value="100" Type="integer" />
+    <Registry Name="AutoOutlining" Value="1" Type="integer" />
+    <Registry Name="MatchBracesAtCaret" Value="1" Type="integer" />
+    <Registry Name="MatchBraces" Value="1" Type="integer" />
+    <Registry Name="RequestStockColors" Value="0" Type="integer" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="Software\Microsoft\VisualStudio\8.0\Services\{233bafc9-0776-4625-8841-250353e3fc30}" Value="{a6a23e2b-f7a0-4a97-ba77-e509f573c5fc}" Type="string">
+    <Registry Name="Name" Value="NVelocity" Type="string" />
+  </Registry>
+</Include>

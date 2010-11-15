@@ -1,0 +1,17 @@
+$page.VisualEffect(
+  'Highlight',
+  "historyItem_${historyItem.Id}",
+  "%{ duration='3.0', class=$obj.Method() }"
+)
+
+#component (WorkItemFieldRenderer with "displayMode=edit" "workItem=$workItem")
+
+<script>text<strong>text</script>
+
+$page.Call('myJavascriptFunction', $page.Render("%{partial='Shared/something.vm'}"))
+
+<![CDATA[ <tag> ]]>
+
+<div att="#if()attributeValue#end" $something />
+
+$hey.something()more

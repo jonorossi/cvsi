@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>#</td>
+    <td>some text # more text</td>
+  </tr>
+</table>
+
+Hello #if()Guest#end,
+
+I have $100.
+
+<a title="$100$hey" href="#directive, # <- not directive">
+
+#if($something)
+  hi
+#end
+
+#if ($var.Method())
+
+$page.VisualEffect('Highlight', "historyItem_${historyItem.Id}", "%{ duration='3.0', testKey=$obj.Method() }")
+
+<style type="text/css">
+  <![CDATA[
+    div { color: red; }
+  ]]>
+</style>

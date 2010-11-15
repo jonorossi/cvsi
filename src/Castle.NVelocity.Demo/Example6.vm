@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+    <style type="text/css">
+      <![CDATA[
+        a {
+          padding: 0;
+        }
+        #if($a)text#end
+      ]]>
+      #if ($a.B.C)some text#end
+      
+      #foreach ($item in $items)
+        #odd
+          (text)
+      #end
+      #set ($a = 'some text, here')
+    </style>
+  </head>
+  <body>
+    this is some text!!! @
+    <script type="text/javascript">
+      this is script <an element=""></an>
+      
+      <![CDATA[
+        this is script <javascript in here>
+
+        #if (hey)
+          nvelocity doesn't highlight inside script blocks
+        #end
+      ]]>
+      #if(true)#end
+    </script>
+    <![CDATA[this is some cool text that is coloured gray]]>
+    /* */
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      function() {
+        ...
+      }
+      /* ]]> */
+    </script>
+
+    <style type="text/css">
+      /* <![CDATA[ */
+      p {
+        margin: 0;
+      }
+      /* ]]> */
+    </style>
+  </body>
+</html>

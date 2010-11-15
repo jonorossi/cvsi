@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Castle.NVelocity.Ast.AstNode" Collapsed="true">
+    <Position X="4.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\AstNode.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAQgAAAAAAAAAAAAAAgAQIAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVDesignator" Collapsed="true">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVDesignator.cs</FileName>
+      <HashCode>AIAAAAQAAAAAAAAAAABAAAgAAAAAAAAAAIAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Selectors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVIdNode" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVIdNode.cs</FileName>
+      <HashCode>AAAAIAAAAAAAAAQAAAAAAAQQAAAAAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVSelector" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVSelector.cs</FileName>
+      <HashCode>AEAAAAAAEAAAAAQAAABAQAQBAAgAAAAAARAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="Castle.NVelocity.Ast.AstNode" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="1.259" />
+        <Point X="5" Y="1.625" />
+        <Point X="4" Y="1.625" />
+        <Point X="4" Y="4.812" />
+        <Point X="3.75" Y="4.812" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVReference" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVReference.cs</FileName>
+      <HashCode>AIAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAQIAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Designator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVDirective" Collapsed="true">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVDirective.cs</FileName>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVExpression" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVExpression.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.TemplateNode" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\TemplateNode.cs</FileName>
+      <HashCode>AAIIAAAAAgAAACABAABgAAAAABAAAAgAAICAQAAEAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.NVForeachDirective" Collapsed="true">
+    <Position X="4.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\NVForeachDirective.cs</FileName>
+      <HashCode>AAAIACAAAgAAQGABAAAAAAEAAAAAAAgAAIAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

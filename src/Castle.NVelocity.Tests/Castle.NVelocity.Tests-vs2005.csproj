@@ -1,0 +1,76 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79320FC3-082F-4AB3-9974-E0E252635BDB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Castle.NVelocity.Tests</RootNamespace>
+    <AssemblyName>Castle.NVelocity.Tests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.1.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ParserTests\XmlPositionTestCase.cs" />
+    <Compile Include="ParserTests\GetNodeAtPositionTestCase.cs" />
+    <Compile Include="ParserTests\NVelocityCommentsTestCase.cs" />
+    <Compile Include="ParserTests\NVelocityDirectiveTestCase.cs" />
+    <Compile Include="ParserTests\NVelocityExpressionPositionTestCase.cs" />
+    <Compile Include="ParserTests\NVelocityInXmlParserTestCase.cs" />
+    <Compile Include="ParserTests\XmlParserTestCase.cs" />
+    <Compile Include="ParserTests\NVelocityExpressionParserTestCase.cs" />
+    <Compile Include="ParserTests\NVelocityReferenceParserTestCase.cs" />
+    <Compile Include="ParserTests\ParserTestBase.cs" />
+    <Compile Include="ScannerTests\LineScannerTestCase.cs" />
+    <Compile Include="ScannerTests\ScannerOptionsTestCase.cs" />
+    <Compile Include="ScannerTests\SplitTokenTestCase.cs" />
+    <Compile Include="ScannerTests\TokenLookAhead.cs" />
+    <Compile Include="ScannerTests\TokenPositionTestCase.cs" />
+    <Compile Include="ScannerTests\NVelocityTokenTestCase.cs" />
+    <Compile Include="ScannerTests\NVelocityCommentTestCase.cs" />
+    <Compile Include="ScannerTests\NVelocityDirectiveTestCase.cs" />
+    <Compile Include="ScannerTests\ScannerTestBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScannerTests\XmlTestCase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Castle.NVelocity\Castle.NVelocity-vs2005.csproj">
+      <Project>{B37F690C-A4FA-4BC0-AD74-0898624081D4}</Project>
+      <Name>Castle.NVelocity-vs2005</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

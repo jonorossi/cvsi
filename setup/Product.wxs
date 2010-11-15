@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?define ProductShortName = "Castle Visual Studio Integration" ?>
+<?define ProductVersion = "0.3.2" ?>
+<?define ProductVersionText = "$(var.ProductVersion)" ?>
+<?define ProductVersionDir = "0.3" ?>
+<?define Manufacturer = "Jonathon Rossi" ?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="D0FAC4C7-C299-4A68-9FA3-B7ECDA8EA64B" Name="$(var.ProductShortName) $(var.ProductVersionText)" Language="1033"
+			Version="$(var.ProductVersion)" Manufacturer="$(var.Manufacturer)" UpgradeCode="D16D0C2B-3AA4-4B85-A78A-28347A561758">
+
+		<Package Compressed="yes" Description="$(var.ProductShortName) $(var.ProductVersionText)"
+				InstallerVersion="200" ShortNames="no" Manufacturer="$(var.Manufacturer)" />
+
+		<Media Id="1" Cabinet="CVSI.cab" EmbedCab="yes" />
+
+		<!-- Properties -->
+		<Property Id="ALLUSERS" Value="1" />
+		<Property Id="ARPHELPLINK" Value="http://www.jonorossi.com/projects/cvsi/" />
+		<Property Id="ARPURLINFOABOUT" Value="http://www.jonorossi.com/projects/cvsi/" />
+		<Property Id="ARPURLUPDATEINFO" Value="http://www.jonorossi.com/projects/cvsi/" />
+		<Property Id="DEVENV2005_DIR">
+			<RegistrySearch Id="RegSearch_DevEnv2005Dir" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS" Name="EnvironmentDirectory" Type="raw" />
+		</Property>
+		<Property Id="DEVENV2008_DIR">
+			<RegistrySearch Id="RegSearch_DevEnv2008Dir" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS" Name="EnvironmentDirectory" Type="raw" />
+		</Property>
+		<Property Id="DEVENV2005_EXE_PATH">
+			<RegistrySearch Id="RegSearch_DevEnv2005ExePath" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS" Name="EnvironmentPath" Type="raw" />
+		</Property>
+		<Property Id="DEVENV2008_EXE_PATH">
+			<RegistrySearch Id="RegSearch_DevEnv2008ExePath" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS" Name="EnvironmentPath" Type="raw" />
+		</Property>
+
+		<!-- Launch Conditions -->
+		<Condition Message="An administrator must approve or install [ProductName].">Privileged</Condition>
+		<Condition Message="A later version of [ProductName] is already installed.">NOT NEWERVERSIONDETECTED</Condition>
+		<Condition Message="[ProductName] requires Visual Studio 2005 or Visual Studio 2008.">
+			(DEVENV2005_DIR AND DEVENV2005_EXE_PATH) OR (DEVENV2008_DIR AND DEVENV2008_EXE_PATH)
+		</Condition>
+
+		<!-- Directories -->
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="APPLICATIONFOLDER" Name="$(var.ProductShortName)">
+					<Directory Id="VersionDir" Name="v$(var.ProductVersionDir)">
+						<Directory Id="VS2005Dir" Name="VS2005">
+							<Directory Id="VS2005BinDir" Name="bin" />
+						</Directory>
+						<Directory Id="VS2008Dir" Name="VS2008">
+							<Directory Id="VS2008BinDir" Name="bin" />
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+		</Directory>
+
+		<!-- Features -->
+		<Feature Id="Feature_VS2005" Title="Visual Studio 2005 Integration" Level="0">
+			<ComponentRef Id="Component_VS2005" />
+			<Condition Level="1">DEVENV2005_DIR AND DEVENV2005_EXE_PATH</Condition>
+		</Feature>
+		<Feature Id="Feature_VS2008" Title="Visual Studio 2008 Integration" Level="0">
+			<ComponentRef Id="Component_VS2008" />
+			<Condition Level="1">DEVENV2008_DIR AND DEVENV2008_EXE_PATH</Condition>
+		</Feature>
+
+		<!-- Sequences -->
+		<InstallExecuteSequence>
+			<FindRelatedProducts Before="LaunchConditions" />
+			<RemoveExistingProducts After="InstallValidate" />
+			<Custom Action="CA_DevEnv2005Setup" Before="InstallFinalize"><![CDATA[&Feature_VS2005 > 1]]></Custom>
+			<Custom Action="CA_DevEnv2008Setup" Before="InstallFinalize"><![CDATA[&Feature_VS2008 > 1]]></Custom>
+		</InstallExecuteSequence>
+		<InstallUISequence>
+			<FindRelatedProducts Before="LaunchConditions" />
+		</InstallUISequence>
+
+		<!-- Custom actions -->
+		<CustomAction Id="CA_DevEnv2005Setup" Property="DEVENV2005_EXE_PATH" ExeCommand="/setup" Impersonate="no" Execute="deferred" />
+		<CustomAction Id="CA_DevEnv2008Setup" Property="DEVENV2008_EXE_PATH" ExeCommand="/setup" Impersonate="no" Execute="deferred" />
+
+		<!-- User interface -->
+		<UIRef Id="WixUI_Mondo" />
+		<UI>
+			<ProgressText Action="CA_DevEnv2005Setup">Configuring Visual Studio 2005... (this may take a few minutes)</ProgressText>
+			<ProgressText Action="CA_DevEnv2008Setup">Configuring Visual Studio 2008... (this may take a few minutes)</ProgressText>
+		</UI>
+		<WixVariable Id="WixUILicenseRtf" Value="setup\Apache Software License 2.0.rtf" />
+		<WixVariable Id="WixUIDialogBmp" Value="setup\Dialog.bmp" />
+		<WixVariable Id="WixUIBannerBmp" Value="setup\Banner.bmp" />
+	</Product>
+</Wix>

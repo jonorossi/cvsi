@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- This is an NVelocity view template test file -->
+<html
+  xmlns="http://www.w3.org/1999/xhtml"> <!-- tags can wrap onto multiple lines -->
+  <head><title>Page title</title></head>
+  <body>
+    <h1 class="someClass">A Big Title</h1>
+    #if (($someVar == $somethingElse) && (1 + 2 == $somethingElse))
+      #set ($var = $someVar($var, [1..5]))
+      $var
+      #if (true != false) ## keywords
+        #foreach ($var in $someList)
+          ## dictionary colourising
+          $Form.FormTag("%{action='create', immediate='true', useTitles='true'}")
+          $Form.EndFormTag
+        #end
+      #end
+    #elseif ('text$a' == "text$a") ## interpolation
+      #set ($dict = "%{ key='value1' }")
+    #end
+    XML#*NV
+    Comment*#XML
+    
+    #component(DiggStylePagination with "page=$workItems" "url=/some/url/")
+    
+    <script type="text/javascript">
+      // <em>Elements are not scanned in script blocks</em>.
+      // There is no colourising for javascript yet.
+    </script>
+    
+    ## NJS files are also colourised:
+    $page.VisualEffect('Highlight', "historyItem_${historyItem.Id}", "%{ duration='3.0', testKey=$obj.Method() }")
+  </body>
+</html>

@@ -1,0 +1,3 @@
+The Castle Visual Studio Integration source code is licensed under the Apache License Version 2.0.
+
+Application icons and images as part of the installer are not licensed for distribution or any other use without express permission.

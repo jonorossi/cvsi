@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Castle.NVelocity.Ast.AstNode" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\AstNode.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAQIAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.XmlAttribute" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\XmlAttribute.cs</FileName>
+      <HashCode>AAAAIAAAAgAAAAABAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.XmlElement" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\XmlElement.cs</FileName>
+      <HashCode>AAAAIAAAAgCQAggjAAAAAAQRAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Castle.NVelocity.Ast.XmlTextNode" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Ast\XmlTextNode.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>
