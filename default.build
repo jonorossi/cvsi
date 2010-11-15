@@ -24,9 +24,9 @@
 	<target name="compile">
 		<!-- Castle.NVelocity.dll -->
 		<csc target="library" output="build\bin\common\Castle.NVelocity.dll"
-				keyfile="..\..\Castle.NVelocity\trunk\src\Castle.NVelocity\Castle.NVelocity.snk">
+				keyfile="src\Castle.NVelocity\Castle.NVelocity.snk">
 			<sources>
-				<include name="..\..\Castle.NVelocity\trunk\src\Castle.NVelocity\**\*.cs" />
+				<include name="src\Castle.NVelocity\**\*.cs" />
 			</sources>
 		</csc>
 
