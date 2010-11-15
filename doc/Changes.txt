@@ -4,7 +4,7 @@
 
 Unreleased Changes
 ==================
-- n/a
+- Upgraded CVSI so that it works in Visual Studio 2010.
 
 0.3.2 Beta (2008-09-30)
 =======================
