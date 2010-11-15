@@ -83,12 +83,6 @@
     <Compile Include="ScannerTests\XmlTestCase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Castle.NVelocity\Castle.NVelocity-vs2008.csproj">
-      <Project>{A5CD3247-F453-4071-BA6D-D21CB7FC1F72}</Project>
-      <Name>Castle.NVelocity-vs2008</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -114,6 +108,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Castle.NVelocity\Castle.NVelocity-vs2010.csproj">
+      <Project>{6E419017-8FB9-4D6B-99EE-4B7502C234B0}</Project>
+      <Name>Castle.NVelocity-vs2010</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

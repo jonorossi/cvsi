@@ -210,10 +210,12 @@ namespace Castle.VisualStudio.NVelocityLanguageService
 
 		private static string GetXhtmlSchemaFileName()
 		{
-#if VS2008
+#if VS2005
+			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS";
+#elif VS2008
 			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS";
 #else
-			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS";
+			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS";
 #endif
 
 			RegistryKey vsSetupKey = Registry.LocalMachine.OpenSubKey(vsSetupKeyPath);

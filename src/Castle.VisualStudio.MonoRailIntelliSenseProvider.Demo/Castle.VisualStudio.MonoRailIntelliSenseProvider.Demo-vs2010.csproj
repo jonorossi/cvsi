@@ -120,13 +120,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Castle.NVelocity\Castle.NVelocity-vs2008.csproj">
+    <ProjectReference Include="..\Castle.NVelocity\Castle.NVelocity-vs2010.csproj">
       <Project>{6E419017-8FB9-4D6B-99EE-4B7502C234B0}</Project>
-      <Name>Castle.NVelocity-vs2008</Name>
+      <Name>Castle.NVelocity-vs2010</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Castle.VisualStudio.MonoRailIntelliSenseProvider\Castle.VisualStudio.MonoRailIntelliSenseProvider-vs2008.csproj">
+    <ProjectReference Include="..\Castle.VisualStudio.MonoRailIntelliSenseProvider\Castle.VisualStudio.MonoRailIntelliSenseProvider-vs2010.csproj">
       <Project>{1BF278D1-1FD8-4E26-9F93-777E5157A3A7}</Project>
-      <Name>Castle.VisualStudio.MonoRailIntelliSenseProvider-vs2008</Name>
+      <Name>Castle.VisualStudio.MonoRailIntelliSenseProvider-vs2010</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

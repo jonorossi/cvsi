@@ -51,35 +51,41 @@ namespace Castle.VisualStudio.NVelocityLanguageService
 		RequestStockColors = false
 		//ShowCompletion = true,
 		//ShowMatchingBrace = true
-		)]
+	)]
 
 	// This attribute is used to associate the ".vm" and ".njs" file extensions with a language service
 	[ProvideLanguageExtension(typeof(NVelocityLanguage), NVelocityConstants.NVelocityFileExtension)]
 	[ProvideLanguageExtension(typeof(NVelocityLanguage), NVelocityConstants.NVelocityJSFileExtension)]
 
-	// A Visual Studio component can be registered under different regitry roots; for instance
+	// A Visual Studio component can be registered under different registry roots; for instance
 	// when you debug your package you want to register it in the experimental hive. This
-	// attribute specifies the registry root to use if no one is provided to regpkg.exe with
+	// attribute specifies the registry root to use if one is not provided to regpkg.exe with
 	// the /root switch.
-#if VS2008
-	[DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\9.0")]
+
+#if VS2005
+    [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\8.0")]
+#elif VS2008
+    [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\9.0")]
 #else
-	[DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\8.0")]
+    [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\10.0Exp")]
 #endif
 
-	// This attribute is used to register the informations needed to show the this package
+    // This attribute is used to register the informations needed to show the this package
 	// in the Help/About dialog of Visual Studio.
-	[InstalledProductRegistration(true, "#ProductName", "#ProductDetails", "0.3", IconResourceID = 100,
+	[InstalledProductRegistration(true, "#ProductName", "#ProductDetails", "0.4", IconResourceID = 100,
 		LanguageIndependentName = "Castle Visual Studio Integration")]
 
 	// In order to be loaded inside Visual Studio in a machine that does not have the VS SDK
 	// installed, the package needs to have a valid load key (it can be requested at 
 	// http://msdn.microsoft.com/vstudio/extend/). This attributes tells the shell that this
 	// package has a load key embedded in its resources.
-#if VS2008
-	[ProvideLoadKey("Standard", "0.3", "Castle Visual Studio Integration", "Jonathon Rossi", 2008)]
+
+#if VS2005
+    [ProvideLoadKey("Standard", "0.3", "Castle Visual Studio Integration", "Jonathon Rossi", 2005)]
+#elif VS2008
+    [ProvideLoadKey("Standard", "0.3", "Castle Visual Studio Integration", "Jonathon Rossi", 2008)]
 #else
-	[ProvideLoadKey("Standard", "0.3", "Castle Visual Studio Integration", "Jonathon Rossi", 2005)]
+    //TODO
 #endif
 
     [Guid(NVelocityConstants.PackageGuidString)]

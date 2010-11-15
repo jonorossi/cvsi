@@ -356,11 +356,11 @@ namespace Castle.VisualStudio.NVelocityLanguageService
             return VSConstants.S_OK;
         }
 
-#if VS2008
-		public override string GetFormatFilterList()
-		{
-			return "Not implemented.";
-		}
+#if !VS2005
+        public override string GetFormatFilterList()
+        {
+            return "";
+        }
 #endif
     }
 }
