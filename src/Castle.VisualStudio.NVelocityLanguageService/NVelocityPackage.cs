@@ -85,7 +85,7 @@ namespace Castle.VisualStudio.NVelocityLanguageService
 #elif VS2008
     [ProvideLoadKey("Standard", "0.3", "Castle Visual Studio Integration", "Jonathon Rossi", 2008)]
 #else
-    //TODO
+    // Visual Studio 2010 does not require a package load key
 #endif
 
     [Guid(NVelocityConstants.PackageGuidString)]

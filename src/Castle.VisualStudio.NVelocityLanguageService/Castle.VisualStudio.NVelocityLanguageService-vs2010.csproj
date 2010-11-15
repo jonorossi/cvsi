@@ -121,9 +121,9 @@
       <Project>{1BF278D1-1FD8-4E26-9F93-777E5157A3A7}</Project>
       <Name>Castle.VisualStudio.MonoRailIntelliSenseProvider-vs2008</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Castle.VisualStudio.NVelocityLanguageService.DebugWindow\Castle.VisualStudio.NVelocityLanguageService.DebugWindow-vs2008.csproj">
+    <ProjectReference Include="..\Castle.VisualStudio.NVelocityLanguageService.DebugWindow\Castle.VisualStudio.NVelocityLanguageService.DebugWindow-vs2010.csproj">
       <Project>{C0FEAF34-DF2E-47A7-BEFF-6C9B99501A0F}</Project>
-      <Name>Castle.VisualStudio.NVelocityLanguageService.DebugWindow-vs2008</Name>
+      <Name>Castle.VisualStudio.NVelocityLanguageService.DebugWindow-vs2010</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <project name="CVSI" default="release" xmlns="http://tempuri.org/nant-donotuse.xsd">
+    <property name="version" value="0.4.0" />
+
     <!-- User targets -->
     <target name="release" depends="clean, init, copy-dependencies, compile, build-setup" />
 
@@ -42,8 +44,8 @@
             </references>
         </csc>
 
-        <!-- Castle.VisualStudio.NVelocityLanguageService.dll for Visual Studio 2005-->
-        <csc target="library" output="build\bin\vs2005\Castle.VisualStudio.NVelocityLanguageService.dll"
+        <!-- Castle.VisualStudio.NVelocityLanguageService.dll for Visual Studio 2005 -->
+        <csc target="library" define="VS2005" output="build\bin\vs2005\Castle.VisualStudio.NVelocityLanguageService.dll"
                 keyfile="src\Castle.VisualStudio.NVelocityLanguageService\Castle.VisualStudio.NVelocityLanguageService.snk">
             <sources>
                 <include name="src\Castle.VisualStudio.NVelocityLanguageService\**\*.cs" />
@@ -66,7 +68,7 @@
             </references>
         </csc>
 
-        <!-- Castle.VisualStudio.NVelocityLanguageService.dll for Visual Studio 2008-->
+        <!-- Castle.VisualStudio.NVelocityLanguageService.dll for Visual Studio 2008 -->
         <csc target="library" define="VS2008" output="build\bin\vs2008\Castle.VisualStudio.NVelocityLanguageService.dll"
                 keyfile="src\Castle.VisualStudio.NVelocityLanguageService\Castle.VisualStudio.NVelocityLanguageService.snk">
             <sources>
@@ -92,6 +94,15 @@
                 <include name="lib\VS2008\Microsoft.VisualStudio.Shell.Interop.9.0.dll" />
             </references>
         </csc>
+
+        <!-- Everything for Visual Studio 2010 (because MSBuild builds the VSIX) -->
+        <exec program="C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe">
+            <arg value="src\CVSI-vs2010.sln" />
+            <arg value="/t:Rebuild" />
+            <arg value="/p:Configuration=Release" />
+        </exec>
+        <copy file="src\Castle.VisualStudio.NVelocityLanguageService\bin\Release\Castle.VisualStudio.NVelocityLanguageService.vsix"
+            tofile="build\setup\cvsi-${version}.vsix" />
     </target>
 
     <target name="build-setup">
@@ -111,7 +122,7 @@
         <exec program="tools\WiX\bin\light.exe">
             <!-- Set the output MSI -->
             <arg value="-out" />
-            <arg dir="build\setup\CVSI-0.3.2.msi" />
+            <arg dir="build\setup\cvsi-${version}.msi" />
             <!-- Add WiX extension -->
             <arg value="-ext" />
             <arg file="tools\WiX\bin\WixUIExtension.dll" />
