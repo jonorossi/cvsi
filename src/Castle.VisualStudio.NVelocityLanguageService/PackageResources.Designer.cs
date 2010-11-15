@@ -104,7 +104,7 @@ namespace Castle.VisualStudio.NVelocityLanguageService {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0.3.
+        ///   Looks up a localized string similar to 0.4.0.
         /// </summary>
         internal static string ProductVersion {
             get {
