@@ -11,14 +11,20 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.VisualStudio.MonoRailIntelliSenseProvider.Demo-vs2008", "Castle.VisualStudio.MonoRailIntelliSenseProvider.Demo\Castle.VisualStudio.MonoRailIntelliSenseProvider.Demo-vs2008.csproj", "{F0488714-07C6-4C4F-934A-3B9C955D75C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.VisualStudio.NVelocityLanguageService-vs2008", "Castle.VisualStudio.NVelocityLanguageService\Castle.VisualStudio.NVelocityLanguageService-vs2008.csproj", "{2FEF9F9C-1180-4F6D-A609-C8CD529A1C5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6E419017-8FB9-4D6B-99EE-4B7502C234B0} = {6E419017-8FB9-4D6B-99EE-4B7502C234B0}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.VisualStudio.NVelocityLanguageService.DebugWindow-vs2008", "Castle.VisualStudio.NVelocityLanguageService.DebugWindow\Castle.VisualStudio.NVelocityLanguageService.DebugWindow-vs2008.csproj", "{C0FEAF34-DF2E-47A7-BEFF-6C9B99501A0F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6E419017-8FB9-4D6B-99EE-4B7502C234B0} = {6E419017-8FB9-4D6B-99EE-4B7502C234B0}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity-vs2008", "..\..\..\Castle.NVelocity\trunk\src\Castle.NVelocity\Castle.NVelocity-vs2008.csproj", "{6E419017-8FB9-4D6B-99EE-4B7502C234B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity-vs2008", "Castle.NVelocity\Castle.NVelocity-vs2008.csproj", "{6E419017-8FB9-4D6B-99EE-4B7502C234B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity.Demo-vs2008", "..\..\..\Castle.NVelocity\trunk\src\Castle.NVelocity.Demo\Castle.NVelocity.Demo-vs2008.csproj", "{7DD29533-E576-4A0C-BA0F-C026344E6AE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity.Demo-vs2008", "Castle.NVelocity.Demo\Castle.NVelocity.Demo-vs2008.csproj", "{7DD29533-E576-4A0C-BA0F-C026344E6AE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity.Tests-vs2008", "..\..\..\Castle.NVelocity\trunk\src\Castle.NVelocity.Tests\Castle.NVelocity.Tests-vs2008.csproj", "{062FDFDB-0BAE-4E6C-84FB-72F774738CA6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.NVelocity.Tests-vs2008", "Castle.NVelocity.Tests\Castle.NVelocity.Tests-vs2008.csproj", "{062FDFDB-0BAE-4E6C-84FB-72F774738CA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

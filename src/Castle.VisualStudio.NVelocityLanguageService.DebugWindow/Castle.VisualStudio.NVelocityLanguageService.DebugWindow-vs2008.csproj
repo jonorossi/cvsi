@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{C0FEAF34-DF2E-47A7-BEFF-6C9B99501A0F}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -92,8 +92,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Castle.NVelocity\trunk\src\Castle.NVelocity\Castle.NVelocity-vs2008.csproj">
-      <Project>{A5CD3247-F453-4071-BA6D-D21CB7FC1F72}</Project>
+    <ProjectReference Include="..\Castle.NVelocity\Castle.NVelocity-vs2008.csproj">
+      <Project>{6E419017-8FB9-4D6B-99EE-4B7502C234B0}</Project>
       <Name>Castle.NVelocity-vs2008</Name>
     </ProjectReference>
   </ItemGroup>
