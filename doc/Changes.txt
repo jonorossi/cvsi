@@ -1,10 +1,10 @@
-+==================================================================+
-| Changes to Castle Visual Studio Integration and Castle NVelocity |
-+==================================================================+
++=============================================+
+| Changes to Castle Visual Studio Integration |
++=============================================+
 
-Unreleased Changes
+0.4.0 (2011-03-07)
 ==================
-- Upgraded CVSI so that it works in Visual Studio 2010.
+- Upgraded CVSI to support Visual Studio 2010.
 
 0.3.2 Beta (2008-09-30)
 =======================
