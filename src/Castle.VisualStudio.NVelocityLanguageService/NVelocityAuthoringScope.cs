@@ -14,18 +14,18 @@
 
 namespace Castle.VisualStudio.NVelocityLanguageService
 {
-	using System;
-	using System.Collections.Generic;
-	using System.Diagnostics;
-	using System.IO;
-	using Castle.NVelocity.Ast;
-	using Microsoft.VisualStudio;
-	using Microsoft.VisualStudio.Package;
-	using Microsoft.VisualStudio.TextManager.Interop;
-	using Microsoft.Win32;
-	using MonoRailIntelliSenseProvider;
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.IO;
+    using Castle.NVelocity.Ast;
+    using Microsoft.VisualStudio;
+    using Microsoft.VisualStudio.Package;
+    using Microsoft.VisualStudio.TextManager.Interop;
+    using Microsoft.Win32;
+    using MonoRailIntelliSenseProvider;
 
-	public class NVelocityAuthoringScope : AuthoringScope
+    public class NVelocityAuthoringScope : AuthoringScope
     {
         private readonly TemplateNode _templateNode;
         private string _fileName;
@@ -149,13 +149,13 @@ namespace Castle.VisualStudio.NVelocityLanguageService
             }
             else if (astNode is XmlElement)
             {
-            	string xhtmlSchemaFileName = GetXhtmlSchemaFileName();
-				if (string.IsNullOrEmpty(xhtmlSchemaFileName))
-				{
-					Debug.Fail("Could not find XHTML schema.");
-					return declarations;
-				}
-            	XhtmlSchemaProvider xhtmlSchemaProvider = new XhtmlSchemaProvider(xhtmlSchemaFileName);
+                string xhtmlSchemaFileName = GetXhtmlSchemaFileName();
+                if (string.IsNullOrEmpty(xhtmlSchemaFileName))
+                {
+                    Debug.Fail("Could not find XHTML schema.");
+                    return declarations;
+                }
+                XhtmlSchemaProvider xhtmlSchemaProvider = new XhtmlSchemaProvider(xhtmlSchemaFileName);
 
                 XmlElement xmlElement = (XmlElement)astNode;
                 if (string.IsNullOrEmpty(xmlElement.Name))
@@ -169,34 +169,34 @@ namespace Castle.VisualStudio.NVelocityLanguageService
                         }
                     }
 
-					foreach (string xhtmlElement in xhtmlSchemaProvider.GetElements())
-					{
-						declarations.Add(new NVelocityDeclaration(xhtmlElement, null, IntelliSenseIcon.XmlElement));
-					}
-				}
-				else
-				{
-					// Retrieve attributes
-					List<string> xhtmlAttributes = xhtmlSchemaProvider.GetAttributes(xmlElement.Name);
+                    foreach (string xhtmlElement in xhtmlSchemaProvider.GetElements())
+                    {
+                        declarations.Add(new NVelocityDeclaration(xhtmlElement, null, IntelliSenseIcon.XmlElement));
+                    }
+                }
+                else
+                {
+                    // Retrieve attributes
+                    List<string> xhtmlAttributes = xhtmlSchemaProvider.GetAttributes(xmlElement.Name);
 
-					// Remove attributes that are already used
-					foreach (AstNode attribute in xmlElement.Attributes)
-					{
-						if (attribute is XmlAttribute)
-						{
-							XmlAttribute xmlAttribute = (XmlAttribute)attribute;
-							if (xhtmlAttributes.Contains(xmlAttribute.Name))
-							{
-								xhtmlAttributes.Remove(xmlAttribute.Name);
-							}
-						}
-					}
+                    // Remove attributes that are already used
+                    foreach (AstNode attribute in xmlElement.Attributes)
+                    {
+                        if (attribute is XmlAttribute)
+                        {
+                            XmlAttribute xmlAttribute = (XmlAttribute)attribute;
+                            if (xhtmlAttributes.Contains(xmlAttribute.Name))
+                            {
+                                xhtmlAttributes.Remove(xmlAttribute.Name);
+                            }
+                        }
+                    }
 
-					// Add the declarations for the attributes to show
-					foreach (string xhtmlAttribute in xhtmlAttributes)
-					{
-						declarations.Add(new NVelocityDeclaration(xhtmlAttribute, null, IntelliSenseIcon.XmlAttribute));
-					}
+                    // Add the declarations for the attributes to show
+                    foreach (string xhtmlAttribute in xhtmlAttributes)
+                    {
+                        declarations.Add(new NVelocityDeclaration(xhtmlAttribute, null, IntelliSenseIcon.XmlAttribute));
+                    }
                 }
             }
             else
@@ -208,31 +208,33 @@ namespace Castle.VisualStudio.NVelocityLanguageService
             return declarations;
         }
 
-		private static string GetXhtmlSchemaFileName()
-		{
+        private static string GetXhtmlSchemaFileName()
+        {
 #if VS2005
-			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS";
+            const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS";
 #elif VS2008
-			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS";
+            const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS";
 #elif VS2010
-			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS";
+            const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS";
 #elif VS2012
-			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS";
+            const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS";
+#elif VS2013
+            const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\12.0\Setup\VS";
 #else
 #error Unsupported Visual Studio version
 #endif
 
-			RegistryKey vsSetupKey = Registry.LocalMachine.OpenSubKey(vsSetupKeyPath);
-			string productDir = vsSetupKey.GetValue("ProductDir") as string;
-			if (!string.IsNullOrEmpty(productDir))
-			{
-				return Path.Combine(productDir, @"Xml\Schemas\xhtml.xsd");
-			}
+            RegistryKey vsSetupKey = Registry.LocalMachine.OpenSubKey(vsSetupKeyPath);
+            string productDir = vsSetupKey.GetValue("ProductDir") as string;
+            if (!string.IsNullOrEmpty(productDir))
+            {
+                return Path.Combine(productDir, @"Xml\Schemas\xhtml.xsd");
+            }
 
-			return null;
-		}
+            return null;
+        }
 
-		public override string GetDataTipText(int line, int col, out TextSpan span)
+        public override string GetDataTipText(int line, int col, out TextSpan span)
         {
             span = new TextSpan();
             return null;

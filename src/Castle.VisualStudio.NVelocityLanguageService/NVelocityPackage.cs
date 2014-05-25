@@ -70,6 +70,8 @@ namespace Castle.VisualStudio.NVelocityLanguageService
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\10.0Exp")]
 #elif VS2012
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\11.0Exp")]
+#elif VS2013
+    [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\12.0Exp")]
 #else
 #error Unsupported Visual Studio version
 #endif

@@ -2,10 +2,10 @@
 | Changes to Castle Visual Studio Integration |
 +=============================================+
 
-0.5.0 (xxxx-xx-xx)
+0.5.0 (2014-05-25)
 ==================
-- Upgraded CVSI to support Visual Studio 2012 (done 2012-10-14).
-  Preview released http://stackoverflow.com/questions/14714549/visual-studio-2012-colorizer-and-intellisense-for-the-nvelocity-language
+- Upgraded CVSI to support Visual Studio 2012 (done 2012-10-14; preview released http://stackoverflow.com/questions/14714549/visual-studio-2012-colorizer-and-intellisense-for-the-nvelocity-language)
+- Upgraded CVSI to support Visual Studio 2013 (done 2014-05-25)
 
 0.4.0 (2011-03-07)
 ==================
