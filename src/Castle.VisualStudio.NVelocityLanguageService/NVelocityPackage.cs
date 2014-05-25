@@ -66,8 +66,12 @@ namespace Castle.VisualStudio.NVelocityLanguageService
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\8.0")]
 #elif VS2008
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\9.0")]
-#else
+#elif VS2010
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\10.0Exp")]
+#elif VS2012
+    [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\11.0Exp")]
+#else
+#error Unsupported Visual Studio version
 #endif
 
     // This attribute is used to register the informations needed to show the this package
@@ -85,7 +89,7 @@ namespace Castle.VisualStudio.NVelocityLanguageService
 #elif VS2008
     [ProvideLoadKey("Standard", "0.3", "Castle Visual Studio Integration", "Jonathon Rossi", 2008)]
 #else
-    // Visual Studio 2010 does not require a package load key
+    // Visual Studio 2010+ does not require a package load key
 #endif
 
     [Guid(NVelocityConstants.PackageGuidString)]

@@ -214,8 +214,12 @@ namespace Castle.VisualStudio.NVelocityLanguageService
 			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS";
 #elif VS2008
 			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS";
-#else
+#elif VS2010
 			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS";
+#elif VS2012
+			const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS";
+#else
+#error Unsupported Visual Studio version
 #endif
 
 			RegistryKey vsSetupKey = Registry.LocalMachine.OpenSubKey(vsSetupKeyPath);

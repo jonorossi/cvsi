@@ -3,7 +3,7 @@
   <Identifier Id="a6a23e2b-f7a0-4a97-ba77-e509f573c5fc">
     <Name>Castle Visual Studio Integration</Name>
     <Author>Jonathon Rossi</Author>
-    <Version>0.4.0</Version>
+    <Version>0.5.0</Version>
     <Description xml:space="preserve">Castle Visual Studio Integration</Description>
     <Locale>1033</Locale>
     <MoreInfoUrl>http://jonorossi.com/projects/cvsi/</MoreInfoUrl>
@@ -11,11 +11,11 @@
     <PreviewImage>cvsi.png</PreviewImage>
     <InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
-      <VisualStudio Version="10.0">
+      <VisualStudio Version="11.0">
         <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SupportedFrameworkRuntimeEdition MinVersion="4.5" MaxVersion="4.5" />
   </Identifier>
   <References>
     <Reference Id="Microsoft.VisualStudio.MPF" MinVersion="10.0">
