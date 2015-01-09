@@ -17,8 +17,3 @@ To develop extensions for Visual Studio you will need to install the Visual Stud
 Configure the Visual Studio project to launch the Visual Studio experimental hive:
 * Set "Start external program" to "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe"
 * Set "Command line arguments" to "/ranu /rootsuffix Exp"
-
-Issue Tracker
--------------
-Unresolved CVSI issues:
-* http://issues.castleproject.org/youtrack/issues/CONTRIB?q=%23{Castle+Visual+Studio+Integration}+%23Unresolved
