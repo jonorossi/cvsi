@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
 namespace Castle.VisualStudio.NVelocityLanguageService
 {
     using System;
@@ -220,6 +221,8 @@ namespace Castle.VisualStudio.NVelocityLanguageService
             const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS";
 #elif VS2013
             const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\12.0\Setup\VS";
+#elif VS2015
+            const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\14.0\Setup\VS";
 #else
 #error Unsupported Visual Studio version
 #endif
