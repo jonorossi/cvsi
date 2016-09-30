@@ -57,10 +57,10 @@ namespace Castle.VisualStudio.NVelocityLanguageService
 	[ProvideLanguageExtension(typeof(NVelocityLanguage), NVelocityConstants.NVelocityFileExtension)]
 	[ProvideLanguageExtension(typeof(NVelocityLanguage), NVelocityConstants.NVelocityJSFileExtension)]
 
-	// A Visual Studio component can be registered under different registry roots; for instance
-	// when you debug your package you want to register it in the experimental hive. This
-	// attribute specifies the registry root to use if one is not provided to regpkg.exe with
-	// the /root switch.
+    // A Visual Studio component can be registered under different registry roots; for instance
+    // when you debug your package you want to register it in the experimental hive. This
+    // attribute specifies the registry root to use if one is not provided to regpkg.exe with
+    // the /root switch.
 
 #if VS2005
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\8.0")]
@@ -72,13 +72,15 @@ namespace Castle.VisualStudio.NVelocityLanguageService
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\11.0Exp")]
 #elif VS2013
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\12.0Exp")]
+#elif VS2015
+    [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0Exp")]
 #else
 #error Unsupported Visual Studio version
 #endif
 
     // This attribute is used to register the informations needed to show the this package
-	// in the Help/About dialog of Visual Studio.
-	[InstalledProductRegistration(true, "#ProductName", "#ProductDetails", "0.4", IconResourceID = 100,
+    // in the Help/About dialog of Visual Studio.
+    [InstalledProductRegistration(true, "#ProductName", "#ProductDetails", "0.4", IconResourceID = 100,
 		LanguageIndependentName = "Castle Visual Studio Integration")]
 
 	// In order to be loaded inside Visual Studio in a machine that does not have the VS SDK
